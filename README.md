@@ -1,4 +1,4 @@
-# Design Pattern Python Implementation
+# Design Pattern TypeScript Implementation
 
 ---
 
@@ -44,11 +44,15 @@ their interface, not their implementations
   - uses only interfaces declared by AbstractFactory and AbstractProduct
 classes
 
+##### Usage
+
+Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+
 ---
 
 ## References
 
-<pre><p  style="font-size: 18px;">All the above informations are cited from the book <br><b style="color: red;">Design Patterns: Elements of Reusable Object-Oriented Software</b>.</p></pre>
+<pre><p>All the above informations are cited from the book <br><b style="color: red;">Design Patterns: Elements of Reusable Object-Oriented Software</b>.</p></pre>
 ---
 
 ## License
