@@ -8,22 +8,22 @@ import {FactoryProducer} from './abstract_factory';
  * the elements inside the pattern, this code will still work.
  */
 class Client{
-  main(): void{
-    let product1Factory = FactoryProducer.getFactory('1');
-    let product2Factory = FactoryProducer.getFactory('2');
+  productA;
+  productB;
 
-    let productA1 = product1Factory.createProductA();
-    let productB1 = product1Factory.createProductB();
+  constructor(productFactory){
+    this.productA = productFactory.createProductA();
+    this.productB = productFactory.createProductB();
+  }
 
-    let productA2 = product2Factory.createProductA();
-    let productB2 = product2Factory.createProductB();
-
-    productA1.log();
-    productB1.log();
-    productA2.log();
-    productB2.log();
+  run(){
+    this.productA.log();
+    this.productB.log();
   }
 }
 
-let client = new Client();
-client.main();
+let procuct1Factory = FactoryProducer.getFactory('1');
+let procuct2Factory = FactoryProducer.getFactory('2');
+
+new Client(procuct1Factory).run();
+new Client(procuct2Factory).run();

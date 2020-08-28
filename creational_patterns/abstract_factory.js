@@ -1,7 +1,10 @@
 "use strict";
 /**
  * IMPLEMENTATIO OF THE ABSTRACT FACTORY PATTERN AS EXPLAINED IN THE
- * DESIGN PATTERNS: ELEMENTS OF REUSABLE OBJECT-ORIENTED SOFTWARE
+ * DESIGN PATTERNS: ELEMENTS OF REUSABLE OBJECT-ORIENTED SOFTWARE BOOK
+ *
+ * Follow the UML diagram in the README FILE to see how the elements interact
+ * with eachother
  */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -81,6 +84,7 @@ var ConcreteFactory2 = /** @class */ (function (_super) {
     };
     return ConcreteFactory2;
 }(AbstractFactory));
+// this is not part of the pattern but is a good practice
 var FactoryProducer = /** @class */ (function () {
     function FactoryProducer() {
     }
