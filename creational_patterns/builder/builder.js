@@ -7,11 +7,10 @@
  * with eachother
  */
 exports.__esModule = true;
-exports.Director = exports.ConcreteBuilder1 = void 0;
+exports.Director = exports.ConcreteBuilder2 = exports.ConcreteBuilder1 = void 0;
 var ConcreteBuilder1 = /** @class */ (function () {
     function ConcreteBuilder1(productId) {
-        this.product = new Product1();
-        this.product.setId(productId);
+        this.product = new Product1(productId);
     }
     ConcreteBuilder1.prototype.buildPart1 = function (part1Value) {
         this.product.setPart1(part1Value);
@@ -35,26 +34,49 @@ var ConcreteBuilder1 = /** @class */ (function () {
     return ConcreteBuilder1;
 }());
 exports.ConcreteBuilder1 = ConcreteBuilder1;
-var Product1 = /** @class */ (function () {
-    function Product1() {
+var ConcreteBuilder2 = /** @class */ (function () {
+    function ConcreteBuilder2(productId) {
+        this.product = new Product1(productId);
     }
-    Product1.prototype.setId = function (id) {
-        this.id = id;
+    ConcreteBuilder2.prototype.buildPart1 = function (part1Value) {
+        this.product.setPart1(part1Value);
+        return this;
     };
+    ConcreteBuilder2.prototype.buildPart2 = function (part2Value) {
+        this.product.setPart2(part2Value);
+        return this;
+    };
+    ConcreteBuilder2.prototype.buildPart3 = function (part3Value) {
+        return this;
+    };
+    ConcreteBuilder2.prototype.buildPart4 = function (part4Value) {
+        return this;
+    };
+    ConcreteBuilder2.prototype.getProduct = function () {
+        return this.product;
+    };
+    return ConcreteBuilder2;
+}());
+exports.ConcreteBuilder2 = ConcreteBuilder2;
+var Product1 = /** @class */ (function () {
+    function Product1(idValue) {
+        this.product = {};
+        this.product.id = idValue;
+    }
     Product1.prototype.setPart1 = function (part1Value) {
-        this.part1 = part1Value;
+        this.product.part1 = part1Value;
     };
     Product1.prototype.setPart2 = function (part2Value) {
-        this.part2 = part2Value;
+        this.product.part2 = part2Value;
     };
     Product1.prototype.setPart3 = function (part3Value) {
-        this.part3 = part3Value;
+        this.product.part3 = part3Value;
     };
     Product1.prototype.setPart4 = function (part4Value) {
-        this.part4 = part4Value;
+        this.product.part4 = part4Value;
     };
     Product1.prototype.log = function () {
-        console.log('The product has id ' + this.id.toString() + ' with parts: ' + this.part1 + ', ' + this.part2 + ', ' + this.part3 + ', ' + this.part4);
+        console.log('The product is: ', this.product);
     };
     return Product1;
 }());

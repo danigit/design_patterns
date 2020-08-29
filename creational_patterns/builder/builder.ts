@@ -18,8 +18,7 @@ export class ConcreteBuilder1 implements Builder{
   private product: Product;
 
   constructor(productId: number){
-    this.product = new Product1();
-    this.product.setId(productId);
+    this.product = new Product1(productId);
   }
 
   public buildPart1(part1Value: String): ConcreteBuilder1{
@@ -47,8 +46,38 @@ export class ConcreteBuilder1 implements Builder{
   }
 }
 
+export class ConcreteBuilder2 implements Builder{
+
+  private product: Product;
+
+  constructor(productId: number){
+    this.product = new Product1(productId);
+  }
+
+  public buildPart1(part1Value: String): ConcreteBuilder2{
+    this.product.setPart1(part1Value);
+    return this;
+  }
+
+  public buildPart2(part2Value: String): ConcreteBuilder2{
+    this.product.setPart2(part2Value);
+    return this;
+  }
+
+  public buildPart3(part3Value: String): ConcreteBuilder2{
+    return this;
+  }
+
+  public buildPart4(part4Value: String): ConcreteBuilder2{
+    return this;
+  }
+
+  getProduct(): Product {
+    return this.product;
+  }
+}
+
 interface Product{
-  setId(idValue: number);
   setPart1(part1Value: String);
   setPart2(part2Value: String);
   setPart3(part3Value: String);
@@ -57,34 +86,30 @@ interface Product{
 }
 
 class Product1 implements Product{
-  private id;
-  private part1;
-  private part2;
-  private part3;
-  private part4;
+  private product: {[k: string]: any} = {}; 
 
-  public setId(id: number){
-    this.id = id;
+  constructor(idValue: number){
+    this.product.id = idValue;
   }
 
   public setPart1(part1Value: String){
-    this.part1 = part1Value;
+    this.product.part1 = part1Value;
   }
 
   public setPart2(part2Value: String){
-    this.part2 = part2Value;
+    this.product.part2 = part2Value;
   }
 
   public setPart3(part3Value: String){
-      this.part3 = part3Value;
+      this.product.part3 = part3Value;
   }
 
   public setPart4(part4Value: String){
-    this.part4 = part4Value;
+    this.product.part4 = part4Value;
   }
 
   log(){
-    console.log('The product has id ' + this.id.toString() + ' with parts: ' + this.part1 + ', ' + this.part2 + ', ' + this.part3 + ', ' + this.part4);
+    console.log('The product is: ', this.product);
   }
 }
 

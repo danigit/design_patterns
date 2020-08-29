@@ -12,15 +12,24 @@ var Client = /** @class */ (function () {
     };
     return Client;
 }());
-var builder = new builder_1.ConcreteBuilder1(1);
-var director = new builder_1.Director(builder);
-var client = new Client(director);
-client.run();
+var builder1 = new builder_1.ConcreteBuilder1(1);
+var director1 = new builder_1.Director(builder1);
+var builder2 = new builder_1.ConcreteBuilder2(2);
+var director2 = new builder_1.Director(builder2);
+var client1 = new Client(director1);
+client1.run();
+var client2 = new Client(director2);
+client2.run();
 // we can use the builder without a director if needed
-var product = new builder_1.ConcreteBuilder1(2)
+var product1 = new builder_1.ConcreteBuilder1(3)
     .buildPart1('part_1')
     .buildPart2('part_2')
     .buildPart3('part_3')
     .buildPart4('part_4')
     .getProduct();
-product.log();
+product1.log();
+var product2 = new builder_1.ConcreteBuilder1(4)
+    .buildPart1('part-1')
+    .buildPart2('part-2')
+    .getProduct();
+product2.log();
