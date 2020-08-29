@@ -8,6 +8,7 @@
   - [Abstract Factory](#abstract-factory)
   - [Builder](#builder)
   - [Factory Method](#factory-method)
+  - [Prototype](#prototype)
 ---
 
 ## Creational Patterns
@@ -87,7 +88,7 @@ Run the client file using the command `tsc client.ts` and then run the created j
 ##### Applicability
 - when a class can't anticipate the class of objects it must create
 - when a class wants its subclasses to specify the objects it creates
-- classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate
+- when classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate
 
 ##### Structure
 
@@ -108,6 +109,26 @@ Run the client file using the command `tsc client.ts` and then run the created j
 ##### Usage
 
 Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+
+#### Prototype
+> Specify the kinds of objects to crea te using a prototypical instance, and create new objects by copying this prototype
+
+##### Applicability:
+- when the classes to instantiate are specified at run-time, for example, by dynamic loading
+- to avoid building a class hierarchy of factories that parallels the class hierarchy of products
+- when instances of a class can have one of only a few different combinations of state. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state
+
+##### Structure
+![Project Image](./creational_patterns/img/prototype.png)
+
+##### Partecipants
+- Prototype
+  - declares an interface for cloning itself
+- ConcretePrototype
+  - implements a noperati on for cloning itself
+- Client
+  - creates a new object by asking a prototype to clone itself
+
 
 ---
 
