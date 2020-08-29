@@ -49,7 +49,7 @@ classes
 
 ##### Usage
 
-Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the abstract_factory folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
 
 ### Builder
 >Separate the construction of a complex object from its representation so that the
@@ -80,7 +80,7 @@ interface
 
 ##### Usage
 
-Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+Open a terminal in the builder folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
 
 ### Factory Method
 >Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses
@@ -108,7 +108,7 @@ Open a terminal in the prototype folder and run the client file using the comman
 
 ##### Usage
 
-Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+Open a terminal in the factory_method folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
 
 #### Prototype
 > Specify the kinds of objects to crea te using a prototypical instance, and create new objects by copying this prototype
@@ -148,6 +148,9 @@ Open a terminal in the prototype folder and run the following command to install
   - defines an Instance operation that lets clients access its unique instance. Instance is a class operation
   - may be responsible for creating its own unique instance
 
+##### Usage
+
+Open a terminal in the singleton folder and run the following command to install the required dependencies `npm install esm`. Run the client file using the command `tsc -t es6 client.ts` and then run the created javascript file using the command `node -r esm client.js`. TypeScript and Node are required!
 
 ---
 
