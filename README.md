@@ -9,6 +9,7 @@
   - [Builder](#builder)
   - [Factory Method](#factory-method)
   - [Prototype](#prototype)
+  - [Singleton](#singleton)
 ---
 
 ## Creational Patterns
