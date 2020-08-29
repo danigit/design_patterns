@@ -80,7 +80,7 @@ interface
 
 ##### Usage
 
-Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
 
 ### Factory Method
 >Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses
@@ -108,7 +108,7 @@ Open a terminal in the prototype folder and run the client file using the comman
 
 ##### Usage
 
-Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
 
 #### Prototype
 > Specify the kinds of objects to crea te using a prototypical instance, and create new objects by copying this prototype
@@ -131,7 +131,23 @@ Open a terminal in the prototype folder and run the client file using the comman
 
 ##### Usage
 
-Open a terminal in the prototype folder and run the following command to install the required dependencies `npm install @types/node`. Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the prototype folder and run the following command to install the required dependencies `npm install @types/node`. Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+
+#### Singleton
+> Ensure a class only has one instance, and provide a global point of access to it
+
+##### Applicability:
+- there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point
+- when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code
+
+##### Structure
+![Project Image](./creational_patterns/img/singleton.png)
+
+##### Partecipants
+- Singleton
+  - defines an Instance operation that lets clients access its unique instance. Instance is a class operation
+  - may be responsible for creating its own unique instance
+
 
 ---
 
