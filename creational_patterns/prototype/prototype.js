@@ -1,4 +1,11 @@
 "use strict";
+/**
+ * IMPLEMENTATIO OF THE PROTOTYPE PATTERN AS EXPLAINED IN THE
+ * DESIGN PATTERNS: ELEMENTS OF REUSABLE OBJECT-ORIENTED SOFTWARE BOOK
+ *
+ * Follow the UML diagram in the README FILE to see how the elements interact
+ * with eachother
+ */
 exports.__esModule = true;
 exports.PrototypeFactory = exports.ConcretePrototype2 = exports.ConcretePrototype1 = void 0;
 var ConcretePrototype1 = /** @class */ (function () {
@@ -53,7 +60,7 @@ var ConcretePrototype2 = /** @class */ (function () {
     return ConcretePrototype2;
 }());
 exports.ConcretePrototype2 = ConcretePrototype2;
-// this is not in the pattern but is gogd practice to use it
+// this is not in the pattern but is god practice to use it
 var PrototypeFactory = /** @class */ (function () {
     function PrototypeFactory() {
     }

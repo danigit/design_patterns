@@ -49,7 +49,7 @@ classes
 
 ##### Usage
 
-Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
 
 ### Builder
 >Separate the construction of a complex object from its representation so that the
@@ -80,7 +80,7 @@ interface
 
 ##### Usage
 
-Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
 
 ### Factory Method
 >Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses
@@ -108,7 +108,7 @@ Run the client file using the command `tsc client.ts` and then run the created j
 
 ##### Usage
 
-Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+Open a terminal in the prototype folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
 
 #### Prototype
 > Specify the kinds of objects to crea te using a prototypical instance, and create new objects by copying this prototype
@@ -129,6 +129,9 @@ Run the client file using the command `tsc client.ts` and then run the created j
 - Client
   - creates a new object by asking a prototype to clone itself
 
+##### Usage
+
+Open a terminal in the prototype folder and run the following command to install the required dependencies `npm install @types/node`. Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
 
 ---
 
