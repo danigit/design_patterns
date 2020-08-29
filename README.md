@@ -1,4 +1,4 @@
-# Design Pattern TypeScript Implementation
+# Design Patterns TypeScript Implementation
 
 ---
 
@@ -101,10 +101,13 @@ Run the client file using the command `tsc client.ts` and then run the created j
   - implements theProduct interface
 - Creator
   - declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object
- - may call the factory method to create a Product object
+  - may call the factory method to create a Product object
+- ConcreteCreator
+  - overrides the factory method to return an instance of a Concrete Product
 
+##### Usage
 
-
+Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
 
 ---
 
