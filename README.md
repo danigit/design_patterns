@@ -7,6 +7,7 @@
 - [Creational Patterns](#creational-patterns)
   - [Abstract Factory](#abstract-factory)
   - [Builder](#builder)
+  - [Factory Method](#factory-method)
 ---
 
 ## Creational Patterns
@@ -79,6 +80,28 @@ interface
 ##### Usage
 
 Run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!.
+
+### Factory Method
+>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses
+
+##### Applicability
+- when a class can't anticipate the class of objects it must create
+- when a class wants its subclasses to specify the objects it creates
+- classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate
+
+##### Structure
+
+![Project Image](./creational_patterns/img/factory_method.png)
+
+##### Participants
+
+- Product
+  - defines the interface of objects the factory method creates
+- ConcreteProduct
+  - implements theProduct interface
+- Creator
+  - declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object
+ - may call the factory method to create a Product object
 
 
 
