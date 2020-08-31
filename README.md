@@ -183,6 +183,10 @@ Open a terminal in the singleton folder and run the following command to install
 - Adapter
   - adapts the interface of Adaptee to the Target interface
 
+##### Usage
+
+Open a terminal in the adapter folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+
 
 
 
