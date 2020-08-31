@@ -12,6 +12,7 @@
   - [Singleton](#singleton)
 - [Structural Patterns](#structural-patterns)
   - [Adapter](#adapter)
+  - [Bridge](#bridge)
 ---
 
 ## Creational Patterns
@@ -187,7 +188,30 @@ Open a terminal in the singleton folder and run the following command to install
 
 Open a terminal in the adapter folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
 
+#### Bridge
+> Decouple an abstraction from its implementation so that the two can vary independently
 
+##### Applicability:
+- you want to avoid a permanent binding between an abstraction and its implementation. This might be the case, for example, when the implementation must be selected or switched at run-time
+- when both the abstractions and their implementations should be extensible by subclassing. In this case, the Bridge pattern lets you combine the different abstractions and implementations and extend them independently
+- when changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled
+- (C++) when you want to hide the implementation of an abstraction completely from clients. In C++ the representation of a class is visible in the class interface
+- when you have a proliferation of classes. Such a class hierarchy indicates the need for splitting an object into two parts. Rumbaugh uses the term "nest ed generalizations" to refer to such class hierarchies
+- when you want to share an implementation among multiple objects (perhaps using reference counting), and this fact should be hidden from the client.
+
+##### Structure
+![Project Image](./structural_patterns/img/bridge.png)
+
+##### Partecipants
+- Abstraction
+  - defines the abstraction's interface
+  - maintains a reference to an object of type Implementor
+- RefinedAbstraction
+  - Extends the interface defined by Abstraction
+- Implementor
+  - defines the interface for implementation classes. This interface doesn't have to correspond exactly to Abstraction's interface; in fact the two interfaces can be quite different. Typically the Implementor interface provides only primitive operations, and Abstraction defines higher-level operations based on these primitives
+- ConcreteImplementor
+  - implements the Implementor interface and define its concrete implementation
 
 
 ---
