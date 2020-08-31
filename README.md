@@ -10,6 +10,8 @@
   - [Factory Method](#factory-method)
   - [Prototype](#prototype)
   - [Singleton](#singleton)
+- [Structural Patterns](#structural-patterns)
+  - [Adapter](#adapter)
 ---
 
 ## Creational Patterns
@@ -138,7 +140,7 @@ Open a terminal in the prototype folder and run the following command to install
 > Ensure a class only has one instance, and provide a global point of access to it
 
 ##### Applicability:
-- there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point
+- when there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point
 - when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code
 
 ##### Structure
@@ -152,6 +154,37 @@ Open a terminal in the prototype folder and run the following command to install
 ##### Usage
 
 Open a terminal in the singleton folder and run the following command to install the required dependencies `npm install esm`. Run the client file using the command `tsc -t es6 client.ts` and then run the created javascript file using the command `node -r esm client.js`. TypeScript and Node are required!
+
+## Structural Patterns
+> Structural patterns are concerned with how classes and objects are composed to form larger structures. Structural class patterns use inheritance to compose interfaces or implementations. This pattern is particularly useful for making independently developed class libraries work together. In general, an adapter makes one interface (the adaptee's conform to another, thereby providing a uniform abstraction of different interface s.A class adapter accomplishes this by inheriting privately from an adaptee class. The adapter then expresses its interface in terms of the adaptee's.
+
+#### Adapter
+> Convert the interfac e of a class into another interface clients expect Adapter lets classes work together that couldn' t otherwise because of incompatible interfaces. Also known as **Wrapper**.
+
+##### Applicability:
+- when you want to use an existing class, and its interface does not match the one you need
+- when you want to create a reusable class that cooperates with unrelated or unforeseen classes, that is, classes that don't necessarily have compatible interfaces
+- (object adapter only) when you need to use several existing subclasses, but it's unpractical to adapt their interfa ce by subclassing every one. An obje ct adapter can adapt the interface of its parent class
+
+##### Structure
+![Project Image](./structural_patterns/img/adapter.png)
+
+**Object Adapter Structure**
+
+![Project Image](./structural_patterns/img/object_adapter.png)
+
+##### Partecipants
+- Targhet
+  - defines the domain-specific interface that Client uses
+- Client
+  - collaborates with objects conforming to the Target interface
+- Adaptee
+  - defines a enxisting interface that needs adapting
+- Adapter
+  - adapts the interface of Adaptee to the Target interface
+
+
+
 
 ---
 
