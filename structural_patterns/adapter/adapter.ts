@@ -13,7 +13,7 @@ interface ChargerUsb{
 // this is the Adaptee in the UML diagram
 export class UsbCharger implements ChargerUsb{
   chargeUsb(){
-    console.log("Charging with USB...");
+    console.log("charge USB...");
   }
 }
 
@@ -22,14 +22,14 @@ interface ChargerMicroUsb{
   chargeMicroUsb();
 }
 
-class MicroUsbCharger implements ChargerMicroUsb{
+export class MicroUsbCharger implements ChargerMicroUsb{
   chargeMicroUsb(){
-    console.log("Charging with microUSB...");
+    console.log("charge microUSB...");
   }
 }
 
 // this is the Adapter in the UML diagram
-export class ChargerAdapter implements ChargerMicroUsb{
+export class ChargerAdapter1 implements ChargerMicroUsb{
   usbCharger: UsbCharger;
 
   constructor(charger: UsbCharger){
@@ -37,6 +37,20 @@ export class ChargerAdapter implements ChargerMicroUsb{
   }
 
   chargeMicroUsb(){
+    console.log('Using an MicroUsbCharger Adapter to ')
     this.usbCharger.chargeUsb();
+  }
+}
+
+export class ChargerAdapter2 implements ChargerUsb{
+  microUsbCharger: MicroUsbCharger;
+
+  constructor(charger: MicroUsbCharger){
+    this.microUsbCharger = charger;
+  }
+
+  chargeUsb() {
+    console.log('Using an UsbCharger Adapter to')
+    this.microUsbCharger.chargeMicroUsb();
   }
 }
