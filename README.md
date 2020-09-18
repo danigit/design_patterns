@@ -216,6 +216,8 @@ Open a terminal in the adapter folder and run the client file using the command 
 ##### Usage
 
 Open a terminal in the bridge folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+
+
 ---
 
 ## References
