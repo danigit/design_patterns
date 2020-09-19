@@ -13,6 +13,7 @@
 - [Structural Patterns](#structural-patterns)
   - [Adapter](#adapter)
   - [Bridge](#bridge)
+  - [Composite](#composite)
 ---
 
 ## Creational Patterns
@@ -216,6 +217,34 @@ Open a terminal in the adapter folder and run the client file using the command 
 ##### Usage
 
 Open a terminal in the bridge folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+
+#### Composite
+> Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+##### Applicability:
+- when you want to represent part-whole hierarchies of objects.
+- when you want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly
+
+##### Structure
+![Project Image](./structural_patterns/img/composite.png)
+
+The following image is a tipical Composite object structure.
+
+![Project Image](./structural_patterns/img/typical_composite.png)
+##### Partecipants
+- Component (Graphic)
+  - declares the interface for objects in the composition
+  - implements default behavior for the interface common to all classes, as appropriate
+  - declares an interface for accessing and managing its child components
+  - (optional) defines an interface ffor accessing a component's parent in the recursive structure, and implements it if that's appropriate
+- Leaf (Rectangle, Line, Text, etc)
+  - represents leaf objects in the composition. A lea has no children
+- Composite (Picture)
+  - defines behavior for components having children
+  - stores child components
+  - implements child-related operations in the Component interface
+- Client
+  - manipulates objects in the composition through the Component interface
 
 
 ---
