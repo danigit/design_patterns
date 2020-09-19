@@ -14,6 +14,8 @@
   - [Adapter](#adapter)
   - [Bridge](#bridge)
   - [Composite](#composite)
+  - [Decorator](#decorator)
+
 ---
 
 ## Creational Patterns
@@ -249,6 +251,27 @@ The following image is a tipical Composite object structure.
 ##### Usage
 
 Open a terminal in the composite folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+
+#### Decorator
+> Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+##### Applicability:
+- when you want to add responsibilities to individual objects dynamically and transparently, that is, without affecting other objects
+- for responsabilities that can be withdrawn
+- when extension by subclassing is impractical. Sometimes a large number of independent extensions are possible and would produce an explosion of subclasses to support every combination. Or a class definition maybe hidden or otherwise unavailable for subclassing.
+
+##### Structure
+![Project Image](./structural_patterns/img/decorator.png)
+
+##### Partecipants
+- Component 
+  - defines the interface for objects that can have responsibilities added to the mdynamically
+- ConcreteComponent
+  - defines a n obje ct towhich additional responsibilities canbe attached
+- Decorato
+  - maintains a reference to a Component object and defines an interface that conforms to Component's interface
+- ConcreteDecorator
+  - adds responsabilities to the component
 
 
 ---
