@@ -246,6 +246,10 @@ The following image is a tipical Composite object structure.
 - Client
   - manipulates objects in the composition through the Component interface
 
+##### Usage
+
+Open a terminal in the composite folder and run the client file using the command `tsc client.ts` and then run the created javascript file using the command `node client.js`. TypeScript and Node are required!
+
 
 ---
 
